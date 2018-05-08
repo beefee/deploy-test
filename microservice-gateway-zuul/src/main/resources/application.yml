@@ -6,6 +6,18 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://discovery:8761/eureka/
+      defaultZone: http://microservice-discovery-eureka.test.svc:8761/eureka/
   instance:
-    prefer-ip-address: true
+    prefer-ip-address: false
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 20000
+                            
+ribbon:
+  ReadTimeout: 20000
+  ConnectTimeout: 20000
