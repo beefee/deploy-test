@@ -1,0 +1,9 @@
+/**/target
+
+*.log
+
+
+*.pid
+*.seed
+
+.DS_Store
