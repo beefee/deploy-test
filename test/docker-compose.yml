@@ -1,12 +1,12 @@
 version: '2'        # 表示该docker-compose.yml文件使用的是Version 2 file format
 services:           # Version 2 file format的固定写法，为project定义服务。
-  microservice-discovery-eureka:                                  # 指定服务名称
-    image: leonard2/microservice-discovery-eureka:0.0.1-SNAPSHOT    # 指定服务所使用的镜像
+  eureka:                                  # 指定服务名称
+    image: leonard2/eureka:v1    # 指定服务所使用的镜像
     ports:                                                        # 暴露端口信息
       - "8761:8761"
-  microservice-gateway-zuul:
-    image: leonard2/microservice-gateway-zuul:0.0.1-SNAPSHOT
+  gateway:
+    image: leonard2/gateway:v1
     ports: 
       - "8040:8040"
     links: 
-      - microservice-discovery-eureka
+      - eureka

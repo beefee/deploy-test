@@ -2,7 +2,7 @@ server:
   port: 8761                    # 指定该Eureka实例的端口
 eureka:
   instance: 
-    hostname: microservice-discovery-eureka.test.svc
+    hostname: eureka.test.svc
   client:
     registerWithEureka: false
     fetchRegistry: false

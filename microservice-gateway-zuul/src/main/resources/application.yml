@@ -2,11 +2,11 @@ server:
   port: 8040
 spring:
   application:
-    name: microservice-gateway-zuul
+    name: gateway
 eureka:
   client:
     service-url:
-      defaultZone: http://microservice-discovery-eureka.test.svc:8761/eureka/
+      defaultZone: http://eureka.test.svc:8761/eureka/
   instance:
     prefer-ip-address: false
 
